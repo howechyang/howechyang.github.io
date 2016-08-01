@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<!-- Built using w3 css style schemes ~ shout out ~ made by Howe Yang-->
+<html>
+<title>Howe Yang - GITHUB website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none">
+  <h1 class="w3-xxxlarge w3-text-teal">Quick Access Menu</h1>
+  <a href="javascript:void(0)">Portfolio</a>
+  <a href="javascript:void(0)">About me</a>
+  <a href="javascript:void(0)">Resume</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-theme">Close <i class="fa fa-remove"></i></a>
+</nav>
+
+<!-- Header  with hyperlinks to other index pages-->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i> 
+  <div class="w3-center">
+  <h4>Graduate from Waterloo Computer Science, Passionate gamer, and learning Programmer </h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Howe Yang</h1>
+    <div class="w3-third">
+      <button class="w3-btn w3-xlarge w3-red w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Portfolio</button>
+    </div>
+     <div class="w3-third">
+      <button class="w3-btn w3-xlarge w3-blue-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">About me </button>
+    </div>
+    <div class="w3-third">
+      <button class="w3-btn w3-xlarge w3-white w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Resume</button>
+    </div>
+  </div>
+</header>
+
+<!-- Modal if needed -->
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-padding">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+</div>
+
+<!-- Showing off skills here -->
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+  <h4>Graphics</h4><br>
+  <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;">
+  <p>Created as an assigment in CS488 Graphics</p>
+  <p>Mobile first fluid grid</p>
+  <p>Fits any screen sizes</p>
+  <p>PC Tablet and Mobile</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+  <h4>Standard CSS</h4><br>
+  <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;">
+  <p>Standard CSS only</p>
+  <p>Easy to learn</p>
+  <p>No need for jQuery</p>
+  <p>No JavaScript library</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+  <h4>UI Design</h4><br>
+  <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;">
+  <p>Paper like design</p>
+  <p>Bold colors and shadows</p>
+  <p>Equal across platforms</p>
+  <p>Equal across devices</p>
+  </div>
+</div>
+</div>
+
+
+
+<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
+    document.getElementsByClassName("w3-sidenav")[0].style.textAlign = "center";
+    document.getElementsByClassName("w3-sidenav")[0].style.fontSize = "50px";
+    document.getElementsByClassName("w3-sidenav")[0].style.paddingTop = "10%";
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-dark-grey";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-dark-grey", "");
+    }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+slideIndex = slideIndex + n;
+showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
