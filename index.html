@@ -9,50 +9,69 @@
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <body>
 
-<!-- Side Navigation -->
-<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none">
-  <h1 class="w3-xxxlarge w3-text-teal">Quick Access Menu</h1>
-  <a href="javascript:void(0)">Portfolio</a>
-  <a href="javascript:void(0)">About me</a>
-  <a href="javascript:void(0)">Resume</a>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-theme">Close <i class="fa fa-remove"></i></a>
-</nav>
+<!--
+<script type="text/javascript">
+   function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+</script>
+
+-->
+
+<script type="text/javascript">
+   function toggle_visibility(id) {
+
+       var e1 = document.getElementById("id01");
+       var e2 = document.getElementById("id02");
+       var e3 = document.getElementById("id03");
+
+       if(id == "id01")
+       		e1.style.display = 'block';
+       else
+       		e1.style.display = 'none';
+       	if(id == "id02")
+       		e2.style.display = 'block';
+       else
+       		e2.style.display = 'none';
+       	if(id == "id03")
+       		e3.style.display = 'block';
+       else
+       		e3.style.display = 'none';
+
+   }
+</script>
+
+
 
 <!-- Header  with hyperlinks to other index pages-->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i> 
   <div class="w3-center">
   <h4>Graduate from Waterloo Computer Science, Passionate gamer, and learning Programmer </h4>
   <h1 class="w3-xxxlarge w3-animate-bottom">Howe Yang</h1>
     <div class="w3-third">
-      <button class="w3-btn w3-xlarge w3-red w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Portfolio</button>
+      <button class="w3-btn w3-xlarge w3-red w3-hover-light-grey" onclick="toggle_visibility('id01');" style="font-weight:900;">Portfolio</button>
     </div>
      <div class="w3-third">
-      <button class="w3-btn w3-xlarge w3-blue-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">About me </button>
+      <button class="w3-btn w3-xlarge w3-blue-grey w3-hover-light-grey" onclick="toggle_visibility('id02');" style="font-weight:900;">About me </button>
     </div>
     <div class="w3-third">
-      <button class="w3-btn w3-xlarge w3-white w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Resume</button>
+      <button class="w3-btn w3-xlarge w3-white w3-hover-light-grey" onclick="toggle_visibility('id03');" style="font-weight:900;">Resume</button>
     </div>
   </div>
 </header>
 
-<!-- Modal if needed -->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-8 w3-animate-top">
-      <header class="w3-container w3-theme-l1"> 
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-        <h4>This is still under construction ahhh</h4>
-    </div>
-</div>
+
 
 <!-- Showing off skills here -->
-
-<div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-third">
+<div id="id01" style="display:block" class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third" id="id01">
   <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Graphics</h4><br>
+  <h4>Model Simulation</h4><br>
   <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;">
-  <p> Model Simulation </p>
   <p>Tree hierarchy modeling in 3D space</p>
   <p>Built in C++, OpenGl and Lua</p>
   <p>Allows for transformation and rendering options</p>
@@ -60,10 +79,9 @@
 </div>
 
 <div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Graphics</h4><br>
+  <div class="w3-card-2 w3-padding-top" style="min-height:460px" >
+  <h4>Voxel Pipeline</h4><br>
   <img src="images/voxel.gif" alt="Built in CS488" style="width:304px;height:228px;">
-  <p>Voxel Pipeline</p>
   <p>Built in C++ and OpenGl</p>
   <p>Stores cube information and uses calulcations to render cubes in a grid</p>
   <p>Cubes are rendered via triangular polygons in 3D space </p>
@@ -72,13 +90,29 @@
 </div>
 
 <div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>UI Design</h4><br>
-  <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;">
-  <p>Hmm</p>
+  <div class="w3-card-2 w3-padding-top" style="min-height:460px" >
+  <h4>Mini Game design</h4><br>
+  <img src="images/data.gif" alt="Built in CS488" style="width:304px;height:228px;">
+  <p>Generates particle with varying colours, sizes, and lifetimes</p>
+  <p>Static and Dynamic Collision detection </p>
+  <p>Conditional Triggers and event flags to allow progression</p>
 
   </div>
 </div>
+</div>
+
+
+<!-- id 02 -->
+<!-- Showing off skills here -->
+<div id="id02" style="display:none" >
+Heyo self introduction here
+</div>
+
+
+<!-- id 03 -->
+
+<div id="id03" style="display:none" >
+Display PDF here
 </div>
 
 
