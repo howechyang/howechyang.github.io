@@ -11,19 +11,7 @@
 <link ref="stylesheet" href="custom.css">
 <body>
 
-<!--
-<script type="text/javascript">
-   function toggle_visibility(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-   }
-</script>
-
--->
-
+<!-- script to change what is shown on the homepage - built by howe Yang~ -->
 <script type="text/javascript">
    function toggle_visibility(id) {
 
@@ -67,13 +55,53 @@
 </header>
 
 
+<!-- Modal for Puppet -->
+<div id="test01" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('test01').style.display='none'" class="w3-closebtn">&times;</span>
+        <h4>Model Simulation</h4>
+      </header>
+      <div class="w3-padding">
+        <img src="images/puppet.gif" alt="img not working">
+        </div>
+        </div>
+</div>
+
+<!-- Modal for Puppet -->
+<div id="test02" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('test02').style.display='none'" class="w3-closebtn">&times;</span>
+        <h4>Voxel Pipeline</h4>
+      </header>
+      <div class="w3-padding">
+        <img src="images/voxel.gif" alt="img not working">
+        </div>
+        </div>
+</div>
+
+<!-- Modal for Puppet -->
+<div id="test03" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('test03').style.display='none'" class="w3-closebtn">&times;</span>
+        <h4>Mini Game - Life of Data</h4>
+      </header>
+      <div class="w3-padding">
+        <img src="images/data.gif" alt="img not working">
+        </div>
+        </div>
+</div>
+
+
 <!-- Showing off skills here -->
 <div id="id01" style="display:block" class="w3-row-padding w3-center w3-margin-top" >
 <div class="w3-third" >
   <div class="w3-card-2 w3-padding-top" id="hello01" style="min-height:460px; ">
   <h4>Model Simulation</h4><br>
   
-<a href="images/puppet.gif"> <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;" > </a>
+<button onclick="document.getElementById('test01').style.display='block'"> <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;" > </a>
   <p>Built in C++, OpenGl and Lua</p>
   <p>Tree hierarchy modeling in 3D space</p>
   <p>Allows for transformation and rendering options</p>
@@ -83,7 +111,7 @@
 <div class="w3-third">
   <div class="w3-card-2 w3-padding-top"  id="hello01" style="min-height:460px; background-color:#9bc2cf" >
   <h4>Voxel Pipeline</h4><br>
-  <a href="images/voxel.gif"> <img src="images/voxel.gif" alt="Built in CS488" style="width:304px;height:228px;"> </a>
+  <button  onclick="document.getElementById('test02').style.display='block'"> <img src="images/voxel.gif" alt="Built in CS488" style="width:304px;height:228px;"> </a>
   <p>Built in C++ and OpenGl</p>
   <p>Stores cube information and uses calulcations to render cubes in a grid</p>
   <p>Cubes are rendered via triangular polygons in 3D space </p>
@@ -94,7 +122,7 @@
 <div class="w3-third">
   <div class="w3-card-2 w3-padding-top"  id="hello01" style="min-height:460px; background-color:#8aacb8">
   <h4>Mini Game design</h4><br>
-  <a href="images/data.gif"> <img src="images/data.gif" alt="Built in CS488" style="width:304px;height:228px;"> </a>
+  <button  onclick="document.getElementById('test03').style.display='block'"> <img src="images/data.gif" alt="Built in CS488" style="width:304px;height:228px;"> </a>
   <p>Built in C++ and OpenGl</p>
   <p>Generates particle with varying colours, sizes, and lifetimes</p>
   <p>Static and Dynamic Collision detection and conditional triggers </p>
@@ -134,12 +162,28 @@
 
 <div>
  <div class="w3-half w3-row-padding w3-center" >
- <div class="w3-card white" style="text-align:center; background-color:#F9BF3B">
-  <h2 style="text-align:center"> My Interests</h2>
+ <div class="w3-card white" style="text-align:left; background-color:#F9BF3B">
+  <h2 style="text-align:center"> Courses taken at Waterloo</h2>
+  <h3 style="text-align:center; background-color:#87D37C">Computer Science</h3>
   <ul>
-  <li>Competetive and Casual Video Games</li>
-  <li>Basketball : big fan of the San Antonio Spurs</li>
-  <li>Fantasy Novels</li>
+  <li>CS 488 : Graphics</li>
+  <li>CS 486 : Artificial Intellgience</li>
+  <li>CS 458 : Computer Secuirty</li>
+  <li>CS 456 : Networking </li>
+  <li>CS 370 : </li>
+  <li>CS 350 : </li>
+  <li>CS 349 : </li>
+  <li>CS 348 : </li>
+</ul>
+<h3 style="text-align:center; background-color:#87D37C">Math</h3>
+  <ul>
+  <li>MATH 239 : Combinatorics</li>
+  <li>MATH 138 : </li>
+  <li>MATH 137 : </li>
+  <li>MATH 136 : </li>
+  <li>MATH 135 : </li>
+  <li>STAT 230 : </li>
+  <li>STAT 231 : </li>
 </ul>
  </div>
  </div>
@@ -159,43 +203,6 @@
 
 
 
-<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
-<script>
-
-
-// Tabs
-function openCity(evt, cityName) {
-  var i;
-  var x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  var activebtn = document.getElementsByClassName("testbtn");
-  for (i = 0; i < x.length; i++) {
-      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " w3-dark-grey";
-}
-
-var mybtn = document.getElementsByClassName("testbtn")[0];
-mybtn.click();
-
-// Accordions
-function myAccFunc(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-dark-grey";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-        x.previousElementSibling.className = 
-        x.previousElementSibling.className.replace(" w3-dark-grey", "");
-    }
-}
-
-
-</script>
 
 </body>
 </html>
