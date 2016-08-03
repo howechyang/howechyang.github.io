@@ -4,6 +4,7 @@
 <html>
 <title>Howe Yang - GITHUB website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link ref="stylesheet" href="base.css">
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="w3-theme-black.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -134,24 +135,16 @@
 <!-- id 03 -->
 
 <div id="id03" style="text-align:center; display:none" >
-<embed src=howeyang-resume.pdf width="850" height="1000" type='application/pdf'>
+<div class="resume">
+    <img src="images/howeyang-resume.jpg">
+</div>
 </div>
 
 
 
 <!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
 <script>
-// Side navigation
-function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
-    document.getElementsByClassName("w3-sidenav")[0].style.textAlign = "center";
-    document.getElementsByClassName("w3-sidenav")[0].style.fontSize = "50px";
-    document.getElementsByClassName("w3-sidenav")[0].style.paddingTop = "10%";
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-}
-function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-}
+
 
 // Tabs
 function openCity(evt, cityName) {
@@ -184,41 +177,7 @@ function myAccFunc(id) {
     }
 }
 
-// Slideshows
-var slideIndex = 1;
 
-function plusDivs(n) {
-slideIndex = slideIndex + n;
-showDivs(slideIndex);
-}
-
-function showDivs(n) {
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-showDivs(1);
-
-// Progress Bars
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
-    }
-  }
-}
 </script>
 
 </body>
