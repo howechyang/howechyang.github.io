@@ -1,243 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<!DOCTYPE html>
-<!-- Built using w3 css style schemes ~ shout out ~ made by Howe Yang-->
-<html>
-<title>Howe Yang - GITHUB website</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="w3-theme-black.css">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<link ref="stylesheet" href="base.css">
-<link ref="stylesheet" href="custom.css">
-<body>
+<head>
+<!-- 
+Outline 
+1. Education
+2. Work Experince
+3. Portfolio
+4. Contact me
 
-<!-- script to change what is shown on the homepage - built by howe Yang~ -->
-<script type="text/javascript">
-   function toggle_visibility(id) {
+    to dos
+    show names under social icons like how Xenia does it. -- mmmmm may take some adjusting
+    reintroduce black gap for Eduction but decrease the size overall in css done
+    need to order the list of completed courses, and also add an interactive component to them. Perhaps highlight them when hover over a list item?
+Need dah GIFs, much Agile, very Swift, ton Parallax?
 
-       var e1 = document.getElementById("id01");
-       var e2 = document.getElementById("id02");
-       var e3 = document.getElementById("id03");
+    change contact to resume?? annoyed
+### Built from Grayscale bootstrap template
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio / Boostrap Website">
+    <meta name="author" content="Howe Yang">
 
-       if(id == "id01")
-       		e1.style.display = 'block';
-       else
-       		e1.style.display = 'none';
-       	if(id == "id02")
-       		e2.style.display = 'block';
-       else
-       		e2.style.display = 'none';
-       	if(id == "id03")
-       		e3.style.display = 'block';
-       else
-       		e3.style.display = 'none';
+    <title>Howe Yang - Toronto, CA </title>
 
-   }
-</script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+    <!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
 
-<!-- Header  with hyperlinks to other index pages-->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-  <div class="w3-center">
-  <h4>Graduate from Waterloo Computer Science, Passionate gamer, and learning Programmer </h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">Howe Yang</h1>
-    <div class="w3-third">
-      <button class="w3-btn w3-xlarge w3-red w3-hover-light-grey" onclick="toggle_visibility('id01');" style="font-weight:900;">Portfolio</button>
-    </div>
-     <div class="w3-third">
-      <button class="w3-btn w3-xlarge w3-blue-grey w3-hover-light-grey" onclick="toggle_visibility('id02');" style="font-weight:900;">About me </button>
-    </div>
-    <div class="w3-third">
-      <button class="w3-btn w3-xlarge w3-white w3-hover-light-grey" onclick="toggle_visibility('id03');" style="font-weight:900;">Resume</button>
-    </div>
-  </div>
-</header>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
+</head>
 
-<!-- Modal for Puppet -->
-<div id="test01" class="w3-modal">
-    <div class="w3-modal-content w3-card-8 w3-animate-top">
-      <header class="w3-container w3-theme-l1"> 
-        <span onclick="document.getElementById('test01').style.display='none'" class="w3-closebtn">&times;</span>
-        <h4>Model Simulation</h4>
-      </header>
-      <div class="w3-padding">
-        <img src="images/puppet.gif" alt="img not working">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-terminal"></i> <span class="light">Howe</span> Yang
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#experience">Work Experience</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header. Sooh Studios?! -->
+    <div id ="container" style="position:absolute;" ></div>
+    <header class="intro">
+        <div class="intro-body">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Howe Yang</h1>
+                        <p class="intro-text"> Design and Game Developer
+                           <br /> <a>Unity | JavaScript | C++ | HQL | Android Studio | Xcode</a> </p>
+                        <a href="#education" class="btn btn-circle page-scroll">
+                            <i class="fa fa-graduation-cap animated "></i>
+                        </a>
+                        <a href="#experience" class="btn btn-circle page-scroll">
+                            <i class="fa fa-briefcase animated"></i>
+                        </a>
+
+                        <a href="#portfolio" class="btn btn-circle btn-port page-scroll ">
+                            <i class="fa fa-gamepad animated"></i>
+                        </a>
+
+                        <a href="#contact" class="btn btn-circle page-scroll">
+                            <i class="fa fa-user animated"></i>
+                        </a>
+                    </div>
+                </div>
+    </header>
+
+    <!-- thinking of using a gradient for h2 titles -->
+    <!-- Education Section -->
+    <section id="education" class="container text-left">
+        <div class ="content-section">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class = "text-center">Education</h2>
+                <p>University of Waterloo <a>Bachelor of Mathematics</a> Honours Computer Science</p>
+                <p></p>
+                <p>Noteable Courses Completed :</p>
+                 <div class="table-bordered ">
+
+                     <li class ="btn-default">CS 488 <w1>Graphics</w1></li>
+                     <li class ="btn-default">CS 486 <w1>Artificial Intelligence</w1></li>
+                     <li class ="btn-default">CS 456 <w1>Computer Networks</w1></li>
+                     <li class ="btn-default">CS 370 <w1>Numerical Computation</w1></li>
+                     <li class ="btn-default">CS 488 <w1>Graphics</w1></li>
+                     <li class ="btn-default">CS 488 <w1>Graphics</w1></li>
+                    CS 488 : Graphics 486 : Artificial Intelligence
+CS 458 : Computer security
+CS 456 : Networking
+CS 370 : Numerical Computation
+CS 350 : Operating Systems
+CS 349 : User Interface
+CS 348 : Databases
+CS 343 : Concurrency</>
+Math
+                     </div>
+            </div>
         </div>
-</div>
+            </div>
+    </section>
 
-<!-- Modal for Puppet -->
-<div id="test02" class="w3-modal">
-    <div class="w3-modal-content w3-card-8 w3-animate-top">
-      <header class="w3-container w3-theme-l1"> 
-        <span onclick="document.getElementById('test02').style.display='none'" class="w3-closebtn">&times;</span>
-        <h4>Voxel Pipeline</h4>
-      </header>
-      <div class="w3-padding">
-        <img src="images/voxel.gif" alt="img not working">
+    <!-- Experience Section -->
+    <section id="experience" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Upsight</h2>
+                    <p>Get one of the fancy backsplash images and set it as a background.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section text-center">
+        <div class="portfolio-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Game links to indi.io?</h2>
+                    <p>GIFS.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
         </div>
-</div>
+    </section>
 
-<!-- Modal for Puppet -->
-<div id="test03" class="w3-modal">
-    <div class="w3-modal-content w3-card-8 w3-animate-top">
-      <header class="w3-container w3-theme-l1"> 
-        <span onclick="document.getElementById('test03').style.display='none'" class="w3-closebtn">&times;</span>
-        <h4>Mini Game - Life of Data</h4>
-      </header>
-      <div class="w3-padding">
-        <img src="images/data.gif" alt="img not working">
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Howe Yang 2017</p>
+            <a>Raised in Toronto, Canada</a>
         </div>
-</div>
+    </footer>
 
-<!-- First row here -->
-<div id="id01" style="display:block" > 
-<div class="w3-row-padding w3-center w3-margin-top" >
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
 
- <h3 style="text-align:center; background-color:#f44336; color:#fff"> Graphical Projects</h3>
-<div class="w3-third" >
-  <div class="w3-card-2 w3-padding-top" id="hello01" style="min-height:460px; ">
-  <h4>Model Simulation</h4><br>
-  
-<button onclick="document.getElementById('test01').style.display='block'"> <img src="images/puppet.gif" alt="Built in CS488" style="width:304px;height:228px;" > </button>
-  <p>Built in C++, OpenGl and Lua</p>
-  <p>Tree hierarchy modeling in 3D space</p>
-  <p>Allows for transformation and rendering options</p>
-  </div>
-</div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top"  id="hello01" style="min-height:460px; background-color:#9bc2cf" >
-  <h4>Voxel Pipeline</h4><br>
-  <button  onclick="document.getElementById('test02').style.display='block'"> <img src="images/voxel.gif" alt="Built in CS488" style="width:304px;height:228px;"> </button>
-  <p>Built in C++ and OpenGl</p>
-  <p>Stores cube information and uses calulcations to render cubes in a grid</p>
-  <p>Cubes are rendered via triangular polygons in 3D space </p>
+    <!-- Plugin JavaScript -->
+    <script src="js/ease.js"></script>
 
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top"  id="hello01" style="min-height:460px; background-color:#8aacb8">
-  <h4>Mini Game design</h4><br>
-  <button  onclick="document.getElementById('test03').style.display='block'"> <img src="images/data.gif" alt="Built in CS488" style="width:304px;height:228px;"></button>
-  <p>Built in C++ and OpenGl</p>
-  <p>Generates particle with varying colours, sizes, and lifetimes</p>
-  <p>Static and Dynamic Collision detection and conditional triggers </p>
- 
-
-  </div>
-</div>
-</div>
-
-<!-- Second row here -->
-<div class="w3-row-padding w3-center w3-margin-top" >
-
- <h3 style="text-align:center; background-color:#f44336; color:#fff"> Academic Projects</h3>
-
-<div class="w3-third" >
-  <div class="w3-card-2 w3-padding-top"  style="min-height:460px; background-color:#9bc2cf">
-  <h4>UDP - TCP communication</h4><br>
-
-  <p>Built in Java</p>
-  <p>Allowed an application to communicate by first establishing a TCP connection</p>
-  <p>Then allowed for UDP communication between two terminals</p>
-  <p>Designed a version which allowed applications to act as routers which would broadcast established connections to each other</p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top"   style="min-height:460px; background-color:#9bc2cf" >
-  <h4>SQL </h4><br>
-
-  <p>Have written embedded SQL code in C++ C</p>
-  <p>Have written theoretical SQL for relational databases</p>
-  <p>Have written theoretical SQL in order to compartmentalize access and security</p>
-
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top"   style="min-height:460px; background-color:#8aacb8">
-
- 
-
-  </div>
-</div>
-</div>
-</div>
-
-<!-- id 02 -->
-<!-- Showing off skills here -->
-<div id="id02" style="display:none" class="w3-row-padding w3-center w3-margin-top" >
-
- <div>
- <div class="w3-half w3-row-padding w3-center" style="text-align:center">
- <div <div class="w3-card white" style="text-align:center; background-color:#87D37C">
-  <h2 style="text-align:center"> My Skills</h2>
-    <h3 style="text-align:center; background-color:#F9BF3B"> Programming Languages</h3>
-   <ul>
-  <li>C++</li>
-  <li>Java / Javascript</li>
-  <li>HTML</li>
-   <li>Bash Script</li>
-</ul>
-<h3 style="text-align:center; background-color:#F9BF3B"> Environments </h3>
-	<ul>
-	<li>Windows</li>
-	<li>Linux (Ubuntu) </li>
-	</ul>
-
- </div>
- </div>
-</div>
-
-
-
-<div>
- <div class="w3-half w3-row-padding w3-center" >
- <div class="w3-card white" style="text-align:left; background-color:#F9BF3B">
-  <h2 style="text-align:center"> Courses taken at Waterloo</h2>
-  <h3 style="text-align:center; background-color:#87D37C">Computer Science</h3>
-  <ul>
-  <li>CS 488 : Graphics</li>
-  <li>CS 486 : Artificial Intelligence</li>
-  <li>CS 458 : Computer security</li>
-  <li>CS 456 : Networking </li>
-  <li>CS 370 : Numerical Computation</li>
-  <li>CS 350 : Operating Systems</li>
-  <li>CS 349 : User Interface</li>
-  <li>CS 348 : Databases</li>
-  <li>CS 343 : Concurrency</li>
-</ul>
-<h3 style="text-align:center; background-color:#87D37C">Math</h3>
-  <ul>
-  <li>MATH 239 : Combinatorics</li>
-  <li>STAT 230 : Probability</li>
-  <li>STAT 231 : Statistics</li>
-</ul>
- </div>
- </div>
- </div>
-
-
-</div>
-
-
-<!-- id 03 -->
-
-<div id="id03" style="text-align:center; display:none" >
-<div class="resume">
-    <img src="images/howeyang-resume.jpg">
-</div>
-</div>
-
-
-
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+    <script src="js/node.js"></script>
 
 </body>
+
 </html>
