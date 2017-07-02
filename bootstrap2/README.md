@@ -1,2 +1,0 @@
-# bootstrap
-practicing boostrap
