@@ -91,11 +91,7 @@ a:focus {
 }
 .navbar-custom .navbar-brand:hover {
   font-weight: 700;
-
-  background-color: rgba(49, 117, 137, 0.7);
-=======
   background-color: rgba(205, 205, 255, 0.7);
-
 }
 .navbar-custom .navbar-brand:focus {
   outline: none;
@@ -111,7 +107,7 @@ a:focus {
 .navbar-custom .nav li a:hover {
   color: rgba(255, 255, 255, 1.0);
   outline: none;
-  background-color: rgba(49, 117, 137, 0.7);
+  background-color: rgba(205, 205, 255, 0.7);
 }
 
 .navbar-custom .nav li a:focus,
@@ -158,9 +154,7 @@ canvas {
     padding: 50px 0;
     text-align: center;
     color: white;
-    
-    background: linear-gradient(to bottom, #044F67, #000);
-
+    background-color: #044F67;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -282,37 +276,25 @@ canvas {
   -o-transform: rotate(360deg);
 }
 .content-section {
-  
+  padding-top: 60px;
 }
 
-/* purple : #674172 */
 #education {
     width: 100%;
     color: white;
-    padding-top: 60px;
-     background: linear-gradient(to bottom, #000, #044F67);
+    background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-#experience {
-    width: 100%;
-    color: white;
-    padding-top: 60px;
-    background: linear-gradient(to bottom, #044F67, #000);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#upsight-back {
+.download-section {
   width: 100%;
-  padding-top: 60px;
+  padding: 50px 0;
   color: white;
   background: url(../img/upsight.png) no-repeat center center scroll;
+  background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -325,7 +307,7 @@ canvas {
 }
 @media (min-width: 767px) {
   .content-section {
-    
+    padding-top: 60px;
   }
   .download-section {
     padding: 20px 0;
@@ -352,7 +334,7 @@ canvas {
 }
 @media (min-width: 767px) {
   .content-section {
-    
+    padding-top: 60px;
   }
   .portfolio-section {
     padding: 100px 0;
@@ -371,17 +353,11 @@ canvas {
   transition: all 0.3s ease-in-out;
   border-radius: 0;
 }
-.btn-green {
+.btn-default {
   border: 1px solid #42DCA3;
   color: #42DCA3;
   background-color: transparent;
 }
-.btn-white {
-  border: 1px solid #42DCA3;
-  color: #fff;
-  background-color: transparent;
-}
-
 .btn-default:hover,
 .btn-default:focus {
   border: 1px solid #42DCA3;
@@ -469,8 +445,3 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-
-.footend{
-  padding-bottom: 500px !important;
-}
-
