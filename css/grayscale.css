@@ -91,7 +91,11 @@ a:focus {
 }
 .navbar-custom .navbar-brand:hover {
   font-weight: 700;
+
   background-color: rgba(49, 117, 137, 0.7);
+=======
+  background-color: rgba(205, 205, 255, 0.7);
+
 }
 .navbar-custom .navbar-brand:focus {
   outline: none;
@@ -156,6 +160,7 @@ canvas {
     color: white;
     
     background: linear-gradient(to bottom, #044F67, #000);
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -468,3 +473,4 @@ body {
 .footend{
   padding-bottom: 500px !important;
 }
+
