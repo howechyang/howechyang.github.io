@@ -35,9 +35,9 @@
     //grid pattern?
     // I think just build a 5 X 5 grid and if the array is empty spawn a node in that array and check
      // when node deletes, uncheck
-   };
+  };
 
-   Node.prototype.addForce = function (force, direction) {
+  Node.prototype.addForce = function (force, direction) {
     this.vx += force * direction.x / this.m;
     this.vy += force * direction.y / this.m;
   };
@@ -85,13 +85,10 @@
   var pixelRatio$1 = window.devicePixelRatio;
 
   function NodeGarden(container) {
-
+   
     this.nodes = [];
     this.container = container;
     this.canvas = document.createElement('canvas');
-    this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
-    console.log("Width" + this.canvas.width + "Height" + this.canvas.height  );
     
     this.ctx = this.canvas.getContext('2d');
     this.started = false;
@@ -99,18 +96,22 @@
     
 
     window.addEventListener('mouseover', function (e) {
-      mouseNode.m = 15;
-
+        mouseNode.m = 15;
+        
     });
 
     window.addEventListener('mouseup', function (e) {
-      mouseNode.m = 0;
+        mouseNode.m = 0;
 
     });
 
-  
+    if (pixelRatio$1 !== 1) {
+      // if retina screen, scale canvas
+      this.canvas.style.transform = 'scale(' + 1 / pixelRatio$1 + ')';
+      this.canvas.style.transformOrigin = '0 0';
+    }
     this.canvas.id = 'nodegarden';
-
+ 
 
     // Add mouse node
     var mouseNode = new Node(this);
@@ -124,8 +125,8 @@
     mouseNode.y = Number.MAX_SAFE_INTEGER;
 
     document.addEventListener('mousemove', function (e) {
-      mouseNode.x = e.pageX;
-      mouseNode.y = e.pageY;
+      mouseNode.x = e.pageX * pixelRatio$1;
+      mouseNode.y = e.pageY * pixelRatio$1;
     });
 
     document.documentElement.addEventListener('mouseleave', function (e) {
@@ -152,25 +153,24 @@
     }
   };
 
-
-NodeGarden.prototype.resize = function () {
-  this.width = window.innerWidth;
-  this.height = window.innerHeight;
-
-  this.area = this.width * this.height;
+  NodeGarden.prototype.resize = function () {
+    this.width = window.innerWidth * pixelRatio$1;
+    this.height = window.innerHeight * pixelRatio$1;
+    this.area = this.width * this.height;
 
     // calculate nodes needed
     this.nodes.length = Math.sqrt(this.area) / 25 | 0;
 
-    this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
+    // set canvas size
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
+ 
 
-
-  if (this.nightMode) {
-    this.ctx.fillStyle = '#ffffff';
-  } else {
-    this.ctx.fillStyle = '#000000';
-  }
+    if (this.nightMode) {
+      this.ctx.fillStyle = '#ffffff';
+    } else {
+      this.ctx.fillStyle = '#000000';
+    }
 
     // create nodes
     for (var i = 0; i < this.nodes.length; i++) {
@@ -183,8 +183,8 @@ NodeGarden.prototype.resize = function () {
 
   NodeGarden.prototype.toggleNightMode = function () {
 
-    this.ctx.fillStyle = '#ffffff';
-    document.body.classList.add('nightmode');
+      this.ctx.fillStyle = '#ffffff';
+      document.body.classList.add('nightmode');
   };
 
   NodeGarden.prototype.render = function (start) {
@@ -243,17 +243,17 @@ NodeGarden.prototype.resize = function () {
 
         this.ctx.strokeStyle = 'rgba(66,220,163,' + (opacity < 1 ? opacity : 1) + ')';
          //this.ctx.strokeStyle = 'rgba(191,191,191,' + (opacity < 1 ? opacity : 1) + ')';
-
+        
          //this.ctx.strokeStyle = 'rgba(63,63,63,' + (opacity < 1 ? opacity : 1) + ')';
-
-         this.ctx.moveTo(nodeA.x, nodeA.y);
-         this.ctx.lineTo(nodeB.x, nodeB.y);
-         this.ctx.stroke();
+      
+        this.ctx.moveTo(nodeA.x, nodeA.y);
+        this.ctx.lineTo(nodeB.x, nodeB.y);
+        this.ctx.stroke();
 
        // nodeA.addForce(force, direction);
        // nodeB.addForce(-force, direction);
-     }
-   }
+      }
+    }
     // render and update nodes
     for (i = 0; i < this.nodes.length; i++) {
       this.nodes[i].render();
@@ -287,7 +287,7 @@ NodeGarden.prototype.resize = function () {
     if (resetNode > nodeGarden.nodes.length - 1) {
       resetNode = 1;
     }
-    nodeGarden.nodes[resetNode].reset({ x: e.pageX , y: e.pageY , vx: 0, vy: 0 });
+    nodeGarden.nodes[resetNode].reset({ x: e.pageX * pixelRatio, y: e.pageY * pixelRatio, vx: 0, vy: 0 });
     
   });
 

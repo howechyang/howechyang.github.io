@@ -2,8 +2,6 @@
 
 Intro color : #044F67;
 
-darker version : 0B486B;
-
 Green : #42DCA3;
 
 
@@ -88,7 +86,7 @@ a:focus {
  
 }
 .navbar-custom .navbar-brand {
-  font-weight: 500;
+  font-weight: 700;
 }
 .navbar-custom .navbar-brand:hover {
   font-weight: 700;
@@ -121,14 +119,14 @@ a:focus {
 }
 .navbar-custom .nav li.active a {
   color : rgba(255, 255, 255, 1.0);
-  background-color: rgba(233,212,96, 0.7);
+  background-color: rgba(155, 255, 155, 0.7);
 }
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
 @media (min-width: 850px) {
   .navbar-custom {
-    padding: 0px 0;
+    padding: 10px 0;
     border-bottom: none;
     letter-spacing: 1px;
     background: transparent;
@@ -156,7 +154,7 @@ canvas {
     text-align: center;
     color: white;
     
-    background: linear-gradient(to top, #0B486B, #000);
+    background: linear-gradient(to bottom, #044F67, #000);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -281,31 +279,12 @@ canvas {
   
 }
 
-/* 
-color section 
-purple : #674172  intro : #044F67 
-http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
-*/
-
-
-
-#aboutme {
-    width: 100%;
-    color: white;
-    padding-top: 60px;
-    background: linear-gradient(to bottom, #0B486B,#3B8686);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-
+/* purple : #674172 */
 #education {
     width: 100%;
     color: white;
     padding-top: 60px;
-     background: linear-gradient(to bottom,#3B8686,#79BD9A);
+     background: linear-gradient(to bottom, #000, #044F67);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -316,36 +295,12 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
     width: 100%;
     color: white;
     padding-top: 60px;
-    background: linear-gradient(to bottom, #79BD9A, #3B8686);
+    background: linear-gradient(to bottom, #044F67, #000);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
-#portfolio {
-    width: 100%;
-    color: white;
-    padding-top: 60px;
-    background: linear-gradient(to bottom, #3B8686, #0B486B);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#contact {
-    width: 100%;
-    color: white;
-    padding-top: 60px;
-    padding-bottom: 250px !important;
-    background: linear-gradient(to top, #000,#0B486B);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-
 
 #upsight-back {
   width: 100%;
@@ -357,7 +312,50 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
   background-size: cover;
   -o-background-size: cover;
 }
-
+#map {
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+}
+@media (min-width: 767px) {
+  .content-section {
+    
+  }
+  .download-section {
+    padding: 20px 0;
+  }
+  #map {
+    height: 400px;
+    margin-top: 250px;
+  }
+}
+.portfolio-section {
+  width: 100%;
+  padding: 50px 0;
+  color: white;
+  background-color: steelblue;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#map {
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+}
+@media (min-width: 767px) {
+  .content-section {
+    
+  }
+  .portfolio-section {
+    padding: 100px 0;
+  }
+  #map {
+    height: 400px;
+    margin-top: 250px;
+  }
+}
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -435,20 +433,19 @@ body {
     text-align: center;
     color:white;
     font-weight: lighter;
-    /*background: #044F67;*/
-    background : rgba(0, 0, 55, 0.2);
+    background: #044F67;
 
 }
 
 .tile:hover {
-    background : rgba(0, 0, 55, 0.4); 
+    background : #317589; 
 }  
 
     /* Make Navigation Toggle on Desktop Hover */
     .tile:hover .dropdown-menu {
         display: block;
         width : 100%;
-        background : rgba(11, 72, 107, 0.75);
+        background : #317589;
     }
 
 /*! Lower Padding */
@@ -468,5 +465,5 @@ body {
 }
 
 .footend{
-  
+  padding-bottom: 500px !important;
 }
