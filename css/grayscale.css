@@ -119,7 +119,7 @@ a:focus {
 }
 .navbar-custom .nav li.active a {
   color : rgba(255, 255, 255, 1.0);
-  background-color: rgba(155, 255, 155, 0.7);
+  background-color: rgba(233,212,96, 0.7);
 }
 .navbar-custom .nav li.active a:hover {
   color: white;
@@ -284,7 +284,7 @@ canvas {
     width: 100%;
     color: white;
     padding-top: 60px;
-     background: linear-gradient(to bottom, #000, #044F67);
+     background: linear-gradient(to bottom, #000,#674172);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -295,12 +295,23 @@ canvas {
     width: 100%;
     color: white;
     padding-top: 60px;
-    background: linear-gradient(to bottom, #044F67, #000);
+    background: linear-gradient(to bottom, #674172,#22313F);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+#portfolio {
+    width: 100%;
+    color: white;
+    padding-top: 60px;
+    background: linear-gradient(to top, #674172,#22313F);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 
 #upsight-back {
   width: 100%;
@@ -329,16 +340,7 @@ canvas {
     margin-top: 250px;
   }
 }
-.portfolio-section {
-  width: 100%;
-  padding: 50px 0;
-  color: white;
-  background-color: steelblue;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
+
 #map {
   width: 100%;
   height: 200px;
@@ -433,7 +435,8 @@ body {
     text-align: center;
     color:white;
     font-weight: lighter;
-    background: #044F67;
+    /*background: #044F67;*/
+    background : rgba(255, 255, 255, 0.2);
 
 }
 
