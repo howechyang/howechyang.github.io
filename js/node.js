@@ -1,10 +1,25 @@
 // Node Garden originally made by https://github.com/pakastin/nodegarden
 // Forked and Added new functionality into Web Page!
 
+
+// Thoughts -
+
+// Create fade in at the top and fade out at the bottom
+
 'use strict';
 
 (function () {
   'use strict';
+
+// global
+
+var counterx = 0;
+var countery = 0;
+
+var rotatey = 0.5;
+var spin = true;
+
+var snowfall = false;
 
   function defined(a, b) {
     return a != null ? a : b;
@@ -16,21 +31,73 @@
   }
 
   Node.prototype.reset = function () {
-    var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-    var x = _ref.x;
-    var y = _ref.y;
-    var vx = _ref.vx;
-    var vy = _ref.vy;
-    var m = _ref.m;
+if(snowfall){
+// Snow fall Pattern
+    var max = 20;
+    var min = -100;
+
+    this.x = defined( (Math.random() * (max - min) + min) * counterx * 100  , counterx * this.garden.width);
+
+    if (this.x <= 0){ 
+        countery =  (Math.random() * (max - 0) + 0) * 100;
+    }
+
+    this.y = defined(countery, countery * this.garden.height);
+    this.vx = defined( 5, Math.random() * 0.5 - 0.25);
+    this.vy = defined( rotatey, Math.random() * 0.5 - 0.25);
+    this.m = defined(1, Math.random() * 3 + 0.5);
+
+    counterx = counterx + 1;
+    countery = countery + 1;
+
+    if (counterx > 50 ){
+      counterx = 0;
+      if(spin){
+        rotatey = rotatey + 1;
+        console.log(rotatey);
+      }else if (!spin){
+        rotatey = rotatey - 1; 
+      }
+    }
+    if (countery > 30 ){
+      countery = 0;
+    }
+    if (rotatey >= 5){
+      spin = false;
+    }else if (rotatey <= 0.5){
+      spin = true;
+    }
+    ;
+  }
+    //End Snow fall pattern
+
+    //Begin Latice Pattern
+  else{
+    this.x = defined(counterx, counterx * this.garden.width);
+    this.y = defined(countery,  countery * this.garden.height);
+    this.vx = defined(0, Math.random() * 3 + 0.5);
+    this.vy = defined(0, Math.random() * 3 + 0.5);
+    this.m = defined(1, Math.random() * 3 + 0.5);
+
+    if ( countery >= this.garden.height){
+      countery = 0;
+      counterx = 0;
+      console.log("RESET");
+    }else if( counterx < this.garden.width ){
+      counterx = counterx + 150;
+    }else if ( counterx >= this.garden.width){
+      countery = countery + 150;
+      counterx = 0;
+    }
+    // thought on how to handle this... 
+    // have it draw random shapes at will
+   
+  
 
 
-    //random spawn pattern
-    this.x = defined(x, Math.random() * this.garden.width);
-    this.y = defined(y, Math.random() * this.garden.height);
-    this.vx = defined(vx, Math.random() * 0.5 - 0.25);
-    this.vy = defined(vy, Math.random() * 0.5 - 0.25);
-    this.m = defined(m, Math.random() * 3 + 0.5);
+  }
+    //End Lattice Pattern
 
     //grid pattern?
     // I think just build a 5 X 5 grid and if the array is empty spawn a node in that array and check
@@ -99,13 +166,17 @@
     
 
     window.addEventListener('mouseover', function (e) {
-      mouseNode.m = 15;
+      mouseNode.m = 3;
 
     });
 
     window.addEventListener('mouseup', function (e) {
-      mouseNode.m = 0;
+      //mouseNode.m = 0;
+      snowfall = true;
 
+      for (var i = 0; i < nodeGarden.nodes.length; i++) {
+        nodeGarden.nodes[i].reset({ x: e.pageX , y: e.pageY , vx: 0, vy: 0 });
+      }
     });
 
   
@@ -160,7 +231,12 @@ NodeGarden.prototype.resize = function () {
   this.area = this.width * this.height;
 
     // calculate nodes needed
-    this.nodes.length = Math.sqrt(this.area) / 25 | 0;
+    if(snowfall){
+      this.nodes.length = Math.sqrt(this.area) / 25 | 0;
+    }else{
+      this.nodes.length = Math.sqrt(this.area) / 12 | 0;
+    }
+   //
 
     this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
@@ -212,7 +288,11 @@ NodeGarden.prototype.resize = function () {
         var squaredDistance = nodeA.squaredDistanceTo(nodeB);
 
         // calculate gravity force
-        var force = 3 * (nodeA.m * nodeB.m) / squaredDistance;
+        if(snowfall){
+          var force = 3 * (nodeA.m * nodeB.m) / squaredDistance;
+        }else{
+          var force = 10 * (nodeA.m * nodeB.m) / squaredDistance;
+        }
 
         var opacity = force * 100;
 
@@ -258,9 +338,9 @@ NodeGarden.prototype.resize = function () {
     for (i = 0; i < this.nodes.length; i++) {
       this.nodes[i].render();
       this.nodes[i].update();
-      this.ctx = this.canvas.getContext('2d');
-      this.ctx.font = "20px Georgia";
-      this.ctx.fillText("Middle Of Canvas", (this.canvas.width / 2), (this.canvas.height/ 2) - 50);
+      //this.ctx = this.canvas.getContext('2d');
+      //this.ctx.font = "20px Georgia";
+      //this.ctx.fillText("Middle Of Canvas", (this.canvas.width / 2), (this.canvas.height/ 2) - 50);
     }
   };
 
