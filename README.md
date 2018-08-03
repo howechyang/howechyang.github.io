@@ -1,12 +1,4 @@
-# bootstrap
-
-v1 - default template
-
-## adding sections
-
-## a lot of previos work
+howeyang.github.io
 
 
-## v3
-
-Color changes etc
+Based off a bootstrap template and then customized :D

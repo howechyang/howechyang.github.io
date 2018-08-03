@@ -33,19 +33,28 @@ w1 {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
-  margin: 0 0 35px;
+  margin: 0 0 25px;
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
+  word-wrap: break-word;
   letter-spacing: 1px;
 }
 
-.edutitle{
+h4 {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+.edutitle {
   margin: auto;
-  display:block;
+  display: block;
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -154,7 +163,7 @@ a:focus {
 
 .navbar-custom .nav li.active a {
   color: rgba(255, 255, 255, 1.0);
-  background-color: rgba(233, 212, 96, 0.7);
+  background-color: rgba(70, 212, 255, 0.7);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -226,7 +235,7 @@ canvas {
 .btn-circle {
   height: 70px;
   margin-top: 15px;
-  padding: 7px 10px;
+  padding: 4px 12px;
   border: 2px solid white;
   border-radius: 100% !important;
   font-size: 40px;
@@ -325,9 +334,7 @@ canvas {
   -o-transform: rotate(360deg);
 }
 
-.content-section {
-
-}
+.content-section {}
 
 /* 
 color section 
@@ -413,13 +420,11 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
 }
 
 .btn-green {
-
   color: #42DCA3;
   background-color: transparent;
 }
 
 .btn-white {
-
   color: #fff;
   background-color: transparent;
 }
@@ -491,49 +496,49 @@ body {
   text-align: center;
   color: white;
   font-weight: lighter;
-  background: rgba(0, 0, 55, 0.4);
+  background: rgba(4, 9, 56, 0.4);
   transition: all 0.5s;
-  
 }
 
 .tile:hover {
-  background: rgba(0, 0, 55, 0.6);
-  padding: 10px;
+  background: rgba(17, 18, 26, 0.9);
+  padding-top: 10px;
 }
 
 /* Make Navigation Toggle on Desktop Hover */
 
-.tile .dropdown-menu{
-  display:block;
+.tile .dropdown-menu {
+  display: block;
   widows: 100%;
   visibility: hidden;
   opacity: 0;
-  background: rgba(0, 0, 55, 0.6);
-  -moz-transition:opacity 0.6s 0.1s ease-out, visibility 0.1s 0.1s linear; 
-	-webkit-transition:opacity 0.6s ease-out, visibility 0.1s 0.1s linear;
-	-o-transition:opacity 0.6s ease-out, visibility 0.1s 0.1s linear;
-	transition:opacity 0.6s ease-out, visibility 0.1s 0.1s linear;
+  background: rgba(17, 18, 26, 0.9);
+  -moz-transition: opacity 0.6s 0.1s ease-out, visibility 0.1s 0.1s linear;
+  -webkit-transition: opacity 0.6s ease-out, visibility 0.1s 0.1s linear;
+  -o-transition: opacity 0.6s ease-out, visibility 0.1s 0.1s linear;
+  transition: opacity 0.6s ease-out, visibility 0.1s 0.1s linear;
 }
 
-.tile:hover .dropdown-menu{
-  display:block;
+.tile:hover .dropdown-menu {
+  display: block;
   visibility: visible;
   opacity: 1;
   widows: 100%;
-  background: rgb(8, 49, 68);
+  background: rgba(17, 18, 26, 0.9);
 }
 
-.tile:hover .dropdown-menu:hover{
-  display:block;
+.tile:hover .dropdown-menu:hover {
+  display: block;
   widows: 100%;
   visibility: hidden;
   opacity: 0;
   background: rgba(0, 0, 55, 0.6);
-  -moz-transition:opacity 0.3s 0.1s ease-out, visibility 0.1s 0.1s linear; 
-	-webkit-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
-	-o-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
-	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+  -moz-transition: opacity 0.3s 0.1s ease-out, visibility 0.1s 0.1s linear;
+  -webkit-transition: opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+  -o-transition: opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+  transition: opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 }
+
 /*! Lower Padding */
 
 .lowpadding {
@@ -544,6 +549,7 @@ body {
 }
 
 .rowpadding {
+  padding-bottom: 15px;
   margin-right: -2px;
   margin-left: -2px;
   display: -webkit-box;
@@ -558,7 +564,8 @@ body {
 
 .tileimg {
   width: 100%;
-  height: 80%;
+  height: 90%;
+  padding-bottom : 2vw;
 }
 
 /* upsight link button */
@@ -581,4 +588,144 @@ body {
 .buttonup:hover {
   padding-right: 30px;
   background: rgba(236, 141, 16, 1.0);
+}
+
+.tooltip1 {
+  visibility: visible;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #044F67;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: relative;
+  z-index: 1;
+}
+
+.tooltip1:hover .tooltiptext {
+  visibility: visible;
+}
+
+.list_skills {
+  text-align: left;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  /* equal height of the children */
+}
+
+.col {
+  flex: 1;
+  /* additionally, equal width */
+  padding: 1em;
+}
+
+.tile2 {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  background: rgba(4, 9, 56, 0.4);
+  transition: all .2s ease-in-out;
+}
+
+.tile2:hover {
+  background: rgba(17, 18, 26, 0.9);
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+#snackbar {
+  visibility: hidden;
+  /* Hidden by default. Visible on click */
+  min-width: 250px;
+  /* Set a default minimum width */
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  background-color: rgb(4, 9, 56, 0.6);
+  /* Black background color */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Centered text */
+  border-radius: 2px;
+  /* Rounded borders */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 1;
+  /* Add a z-index if needed */
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 30px;
+  /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+#snackbar.show {
+  visibility: visible;
+  /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
