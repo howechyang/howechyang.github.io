@@ -77,7 +77,7 @@ p {
   line-height: 1.5;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   p {
     margin: 0 0 35px;
     font-size: 20px;
@@ -107,7 +107,7 @@ a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-custom .navbar-toggle {
@@ -170,7 +170,7 @@ a:focus {
   color: white;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1510px) {
   .navbar-custom {
     padding: 0px 0;
     border-bottom: none;
@@ -216,10 +216,11 @@ canvas {
 }
 
 .intro .intro-body .intro-text {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .intro {
     height: 100%;
     padding: 0;
@@ -346,7 +347,7 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
   width: 100%;
   color: white;
   padding-top: 60px;
-  background: linear-gradient(to bottom, #0B486B, #3B8686);
+  background: linear-gradient(to bottom, #3B8686, #0B486B);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -357,7 +358,7 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
   width: 100%;
   color: white;
   padding-top: 60px;
-  background: linear-gradient(to bottom, #3B8686, #79BD9A);
+  background: linear-gradient(to bottom, #79BD9A, #3B8686);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -368,7 +369,8 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
   width: 100%;
   color: white;
   padding-top: 60px;
-  background: linear-gradient(to bottom, #79BD9A, #3B8686);
+  background: linear-gradient(to bottom, #3B8686, #79BD9A);
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -379,7 +381,7 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
   width: 100%;
   color: white;
   padding-top: 60px;
-  background: linear-gradient(to bottom, #3B8686, #0B486B);
+  background: linear-gradient(to bottom, #0B486B, #3B8686);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -392,6 +394,41 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
   padding-top: 60px;
   padding-bottom: 250px !important;
   background: linear-gradient(to top, #000, #0B486B);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#gallery-section1 {
+  width: 100%;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 10px !important;
+  background: linear-gradient(to bottom, #000, #0B486B);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#gallery-section2 {
+  width: 100%;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 10px !important;
+  background: linear-gradient(to bottom, #0B486B, #42DCA3);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#gallery-section3 {
+  width: 100%;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 10px !important;
+  background: linear-gradient(to bottom, #42DCA3, #0B486B);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -412,7 +449,7 @@ http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -447,7 +484,7 @@ ul.banner-social-buttons {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
@@ -491,18 +528,20 @@ body {
 }
 
 .tile {
+  border-radius: 4px;
   position: relative;
   height: 100%;
   text-align: center;
   color: white;
   font-weight: lighter;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: rgba(4, 9, 56, 0.4);
   transition: all 0.5s;
 }
 
 .tile:hover {
   background: rgba(17, 18, 26, 0.9);
-  padding-top: 10px;
+ 
 }
 
 /* Make Navigation Toggle on Desktop Hover */
@@ -539,6 +578,41 @@ body {
   transition: opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 }
 
+.tile3 {
+  border-radius: 4px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  background: rgba(4, 9, 56, 0.4);
+  transition: all 0.5s;
+}
+
+.tile3:hover {
+  background: rgba(17, 18, 26, 0.9);
+}
+
+.tile4 {
+  border-radius: 4px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  background: rgba(4, 78, 103, 0.3);
+  transition: all 0.5s;
+}
+
+.tile4:hover {
+  background: rgba(4, 78, 103, 0.7);
+  padding-top: 10px;
+  transform: scale(1.5);
+  z-index: 1;
+}
+
 /*! Lower Padding */
 
 .lowpadding {
@@ -558,14 +632,22 @@ body {
   display: flex;
 }
 
-.footend {}
+.footend2{
+  width: 100%;
+  color: white;
+  padding-top: 60px;
+  background: linear-gradient(to bottom, #0B486B, #000);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 
 /* image stuff*/
 
 .tileimg {
   width: 100%;
-  height: 90%;
-  padding-bottom : 2vw;
+  height: auto;
 }
 
 /* upsight link button */
@@ -573,7 +655,7 @@ body {
 .buttonup {
   border-radius: 4px;
   background: rgba(236, 141, 16, 0.644);
-  border: none;
+ 
   color: #FFFFFF;
   text-align: center;
   font-size: 13px;
@@ -590,6 +672,21 @@ body {
   background: rgba(236, 141, 16, 1.0);
 }
 
+.buttonport {
+  border-radius: 4px;
+  
+  background: rgba(6, 179, 72, 0.4);
+  border: none;
+
+  text-align: center;
+
+}
+
+.buttonport:hover {
+  
+  background: rgba(4, 44, 56, 0.9);
+}
+
 .tooltip1 {
   visibility: visible;
   position: relative;
@@ -604,9 +701,11 @@ body {
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px 5px;
   /* Position the tooltip */
   position: relative;
+  top : 40px;
+  right : 75px;
   z-index: 1;
 }
 
@@ -631,6 +730,7 @@ body {
 }
 
 .tile2 {
+  border-radius: 4px;
   position: relative;
   height: 100%;
   text-align: center;
@@ -639,6 +739,12 @@ body {
   background: rgba(4, 9, 56, 0.4);
   transition: all .2s ease-in-out;
 }
+
+.justify_center{
+  display: flex;
+  justify-content: center;
+}
+
 
 .tile2:hover {
   background: rgba(17, 18, 26, 0.9);
@@ -728,4 +834,65 @@ However, delay the fade out process for 2.5 seconds */
     bottom: 0;
     opacity: 0;
   }
+}
+
+.center-btn {
+  border : 10px;
+  border-radius : 5px;
+  border-style: outset;
+  border-width: 5px;
+  position: absolute;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 10px;
+}
+.center-btn.gallery{
+  background: rgba(4, 24, 36, 0.6);
+}
+.center-btn:hover{
+  background: rgba(11, 72, 107, 0.829);
+  border-color: #FFF;
+  color: #fff;
+}
+
+.gallery-btn{
+  border : 10px;
+  border-radius : 5px;
+  border-style: outset;
+  border-width: 5px;
+  font-size: 18px;
+  background: rgba(17, 18, 26, 0.3);
+}
+
+.gallery-btn:hover{
+  background: rgba(11, 72, 107, 1.0);
+  border-color: #FFF;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main_page{
+color: #fff;
+min-height: 50px;
+margin-top: 25px;
+}
+
+@media (max-width: 576px){
+
+.myname{
+display:none;
+}
+.center-btn.main_page{
+left:30%;
+}
+.gallery-btn {
+  height:auto;
+  }
+
+}
+
+small.hidden-xs{
+color: #fff;
 }
